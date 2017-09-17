@@ -1,5 +1,5 @@
 FROM debian:9
-ENV RSPAMD_VERSION=1.6.3
+ENV RSPAMD_VERSION=1.6.4
 RUN apt-get update && apt-get install -y wget gnupg \
 	&& wget -O - https://rspamd.com/apt-stable/gpg.key | apt-key add - \
 	&& echo "deb http://rspamd.com/apt-stable/ stretch main" > /etc/apt/sources.list.d/rspamd.list \

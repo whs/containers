@@ -1,7 +1,7 @@
 FROM php:7.2.0-apache
 ENV RAINLOOP_VERSION=1.11.3
 RUN GPG_KEYS=3B797ECE694F3B7B70F311A4ED7C49D987DA4591 \
-	&& apt-get update && apt-get install -y --no-install-recommends unzip gnupg \
+	&& apt-get update && apt-get install -y --no-install-recommends unzip gnupg dirmngr \
 	&& rm -r /var/lib/apt/lists/* \
 	&& cd /var/www/html/ \
 	&& curl -fSL -o rainloop.zip https://github.com/RainLoop/rainloop-webmail/releases/download/v${RAINLOOP_VERSION}/rainloop-community-${RAINLOOP_VERSION}.zip \

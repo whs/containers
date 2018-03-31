@@ -1,4 +1,4 @@
-FROM php:7.2.2-apache
+FROM php:7.2.4-apache
 ENV RAINLOOP_VERSION=1.11.3
 RUN GPG_KEYS=3B797ECE694F3B7B70F311A4ED7C49D987DA4591 \
 	&& apt-get update && apt-get install -y --no-install-recommends unzip gnupg dirmngr \

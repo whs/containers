@@ -1,5 +1,5 @@
 FROM alpine:edge
-ENV PDNS_VERSION=4.1.0-r0
+ENV PDNS_VERSION=4.1.1-r3
 RUN apk add --no-cache pdns pdns-backend-bind
 COPY pdns.conf /etc/pdns/pdns.conf
 EXPOSE 53

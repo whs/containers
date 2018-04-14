@@ -9,8 +9,8 @@ RUN GPG_KEYS=3B797ECE694F3B7B70F311A4ED7C49D987DA4591 \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEYS" \
 	&& gpg --batch --verify rainloop.zip.asc rainloop.zip \
-	&& rm -r "$GNUPGHOME" rainloop.zip.asc \
-	&& unzip rainloop.zip \
+	&& rm -r "$GNUPGHOME" rainloop.zip.asc; \
+	unzip rainloop.zip \
 	&& rm rainloop.zip \
 	&& chown -R www-data:www-data . \
 	&& find . -type d -exec chmod 755 {} \; \

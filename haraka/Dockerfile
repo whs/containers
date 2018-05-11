@@ -1,4 +1,4 @@
-FROM node:9.11.1
+FROM node:10.1.0
 RUN npm install --unsafe-perm -g Haraka \
 	&& cd /usr/local/lib/node_modules/Haraka/ \
 	&& npm install --unsafe-perm haraka-plugin-karma haraka-plugin-redis \

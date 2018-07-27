@@ -1,5 +1,5 @@
 FROM alpine:edge
-ARG DOVECOT_VERSION=2.3.1-r1
+ARG DOVECOT_VERSION=2.3.2.1-r2
 RUN apk add --no-cache dovecot ca-certificates && mkdir /var/vpopmail && chown 89:89 /var/vpopmail
 COPY 91-docker.conf /etc/dovecot/conf.d/91-docker.conf
 EXPOSE 143 993 110 995 26

@@ -1,5 +1,5 @@
 FROM php:7.2.8-apache
-ENV RAINLOOP_VERSION=1.12.0
+ENV RAINLOOP_VERSION=1.12.1
 RUN GPG_KEYS=3B797ECE694F3B7B70F311A4ED7C49D987DA4591 \
 	&& apt-get update && apt-get install -y --no-install-recommends unzip gnupg dirmngr \
 	&& rm -r /var/lib/apt/lists/* \
